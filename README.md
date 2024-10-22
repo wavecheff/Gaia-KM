@@ -1,5 +1,3 @@
-¡Claro! Vamos a darle un estilo más dinámico y moderno, como el que mencionas para Gaia Call, incluyendo iconos y un formato más visual. Aquí te dejo un nuevo ejemplo de README:
-
 🌍 GaiaKm 🚗
 
 GaiaKm es una aplicación minimalista y divertida en Python, diseñada para ayudarte a convertir importes en euros a kilómetros dentro de un sistema de kilometraje específico. Ideal para cuando necesitas declarar un kilometraje diferente al que aparece en el sistema por errores de cálculo.
@@ -81,4 +79,6 @@ Si ingresas 26 euros, la aplicación te mostrará que necesitas declarar 136.84 
 
 📄 Licencia
 
-Este proyecto está licenciado bajo la licencia MIT
+Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+
