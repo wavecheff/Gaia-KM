@@ -1,35 +1,34 @@
-🌍 GaiaKm 🚗
+# 🌍 GaiaKm 🚗
 
-GaiaKm es una aplicación minimalista y divertida en Python, diseñada para ayudarte a convertir importes en euros a kilómetros dentro de un sistema de kilometraje específico. Ideal para cuando necesitas declarar un kilometraje diferente al que aparece en el sistema por errores de cálculo.
+**GaiaKm** es una aplicación minimalista y divertida en Python, diseñada para ayudarte a convertir importes en euros a kilómetros dentro de un sistema de kilometraje específico. Ideal para cuando necesitas declarar un kilometraje diferente al que aparece en el sistema por errores de cálculo.
 
-🚀 Funcionalidades
+## 🚀 Funcionalidades
 
-	•	🧮 Conversión precisa: Ingresa un importe en euros y convierte a kilómetros usando una tasa predefinida.
-	•	🖥️ Interfaz gráfica intuitiva: Interfaz fácil de usar desarrollada con Tkinter.
-	•	🍦 Helado ASCII: Disfruta de un toque divertido con un arte ASCII de helado.
+- 🧮 **Conversión precisa**: Ingresa un importe en euros y convierte a kilómetros usando una tasa predefinida.
+- 🖥️ **Interfaz gráfica intuitiva**: Interfaz fácil de usar desarrollada con Tkinter.
+- 🍦 **Helado ASCII**: Disfruta de un toque divertido con un arte ASCII de helado.
 
-📦 Instalación
+## 📦 Instalación
 
-Requisitos previos
+### Requisitos previos
 
 Antes de empezar, asegúrate de tener:
 
-	•	Python 3.x instalado. Puedes descargarlo desde aquí.
-	•	La biblioteca Tkinter. Si no la tienes, instálala con el siguiente comando:
-	•	Para Debian/Ubuntu:
+- **Python 3.x** instalado. Puedes descargarlo desde [aquí](https://www.python.org/downloads/).
+- La biblioteca **Tkinter**. Si no la tienes, instálala con el siguiente comando:
+  - Para **Debian/Ubuntu**:
+    ```bash
+    sudo apt-get install python3-tk
+    ```
+  - En **macOS**, Tkinter debería venir preinstalado.
 
-sudo apt-get install python3-tk
+### Pasos
 
+1. Clona este repositorio usando SSH:
 
-	•	En macOS, Tkinter debería venir preinstalado.
-
-Pasos
-
-	1.	Clona este repositorio usando SSH:
-
-git clone git@github.com:wavecheff/Gaia-KM.git
-cd GaiaKm
-
+   ```bash
+   git clone git@github.com:wavecheff/Gaia-KM.git
+   cd GaiaKm
 
 	2.	Ejecuta la aplicación con Python:
 
@@ -80,5 +79,7 @@ Si ingresas 26 euros, la aplicación te mostrará que necesitas declarar 136.84 
 📄 Licencia
 
 Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+
 
 
