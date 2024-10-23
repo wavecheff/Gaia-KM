@@ -1,53 +1,66 @@
 import tkinter as tk
 from tkinter import messagebox
 
-# Función para realizar la conversión
-def convertir_kilometraje():
+def calcular_km_menorquina(kilometros, tarifa_real=0.26, tarifa_detectada=0.19):
+    """
+    Calcula cuántos kilómetros se deben declarar para que con la tarifa detectada (0.19 €/km)
+    se reciba el importe correcto correspondiente a la tarifa real (0.26 €/km).
+    """
     try:
-        importe = float(entry_importe.get())
-        km_declarados = importe / 0.19  # Tarifa incorrecta en La Menorquina
-        label_resultado.config(text=f"Debes declarar: {km_declarados:.2f} km")
+        kilometros = float(kilometros)
+        if kilometros <= 0:
+            raise ValueError("El número de kilómetros debe ser mayor que 0.")
+        
+        importe_real = kilometros * tarifa_real
+        kilometros_ajustados = importe_real / tarifa_detectada
+        return round(kilometros_ajustados, 2)
+    
+    except ValueError as ve:
+        messagebox.showerror("Error", f"Entrada no válida: {ve}")
+        return None
+    except Exception as e:
+        messagebox.showerror("Error", f"Ha ocurrido un error inesperado: {e}")
+        return None
+
+def mostrar_resultado():
+    km = entry_km.get()
+    
+    if not km:
+        messagebox.showerror("Error", "El campo de kilómetros no puede estar vacío.")
+        return
+
+    try:
+        resultado = calcular_km_menorquina(km)
+        if resultado:
+            label_resultado.config(text=f"Debes declarar: {resultado} km")
+        else:
+            label_resultado.config(text="")
     except ValueError:
-        messagebox.showerror("Error", "Por favor, introduce un valor numérico válido.")
+        label_resultado.config(text="")
 
-# Creación de la ventana principal
+# Configuración de la interfaz gráfica
 root = tk.Tk()
-root.title("GaiaKm - Conversión de Kilómetros")
-root.geometry("400x400")
+root.title("GaiaKm - Conversor de kilómetros")
 
-# Arte ASCII de un helado
-ascii_helado = """
-       .
-     --.-"°'-.
-    -/       \-
-   (    .-.    )
-   (  .-._.-.  )
-   (    '-'    )
-    \  ===  /
-     \  ==  /
-      \  =  /
-       \   /
-        \ /
-         V
-"""
+frame = tk.Frame(root, padx=20, pady=20)
+frame.pack(padx=20, pady=20)
 
-# Etiqueta para el arte ASCII
-label_ascii = tk.Label(root, text=ascii_helado, font=("Courier", 12), justify="center")
-label_ascii.pack(pady=10)
+label_instrucciones = tk.Label(frame, text="Introduce los kilómetros detectados a 0.19 €/km:")
+label_instrucciones.grid(row=0, column=0, pady=10)
 
-# Entrada para el importe en euros
-label_importe = tk.Label(root, text="Introduce el importe (€):")
-label_importe.pack(pady=5)
-entry_importe = tk.Entry(root)
-entry_importe.pack(pady=5)
+entry_km = tk.Entry(frame)
+entry_km.grid(row=1, column=0, pady=10)
 
-# Botón para realizar la conversión
-boton_convertir = tk.Button(root, text="Convertir a km", command=convertir_kilometraje)
-boton_convertir.pack(pady=10)
+boton_calcular = tk.Button(frame, text="Calcular", command=mostrar_resultado)
+boton_calcular.grid(row=2, column=0, pady=10)
 
-# Etiqueta para mostrar el resultado
-label_resultado = tk.Label(root, text="")
-label_resultado.pack(pady=10)
+label_resultado = tk.Label(frame, text="", font=("Helvetica", 12))
+label_resultado.grid(row=3, column=0, pady=20)
 
-# Ejecución de la ventana principal
+# Botón para salir
+boton_cerrar = tk.Button(frame, text="Cerrar", command=root.quit)
+boton_cerrar.grid(row=4, column=0, pady=10)
+
+# Iniciar la aplicación
 root.mainloop()
+
