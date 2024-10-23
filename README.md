@@ -8,18 +8,23 @@ Requisitos
 
 Asegúrate de tener instalado Python en tu sistema. Puedes verificarlo ejecutando el siguiente comando:
 
+```bash
 python3 --version
-
+```
 Si no tienes Python instalado, puedes instalarlo usando:
 
+```bash
 sudo apt-get update
 sudo apt-get install python3
+```
 
 Clonar el repositorio
 
 Primero, clona este repositorio en tu máquina local:
 
+```bash
 git clone https://github.com/wavecheff/gaiaKm.git
+```
 
 Crear y activar un entorno virtual (opcional)
 
@@ -27,25 +32,33 @@ Es recomendable usar un entorno virtual para aislar las dependencias del proyect
 
 En Linux/Mac:
 
+```bash
 cd gaiaKm
 python3 -m venv venv
 source venv/bin/activate
+```
 
 En Windows:
 
+```bash
 venv\Scripts\activate
+```
 
 Instalar dependencias
 
 Instala las dependencias necesarias utilizando el archivo requirements.txt:
 
+```bash
 pip install -r requirements.txt
+```
 
 ▶️ Ejecución del programa
 
 Para ejecutar GaiaKm, utiliza el siguiente comando:
 
+```bash
 python gaia_km.py
+```
 
 Esto abrirá la interfaz gráfica donde puedes introducir el número de kilómetros que te pagan a 0,19 €/km, y el programa calculará cuántos deberías declarar para obtener el importe correcto a 0,26 €/km.
 
