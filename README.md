@@ -1,85 +1,83 @@
-# 🌍 GaiaKm 🚗
+Entiendo que deseas que el README incluya una presentación más visual y que se incorporen los íconos y otros elementos gráficos. Aquí te dejo una versión mejorada del README para GaiaKm, con íconos y una estructura más amigable:
 
-**GaiaKm** es una aplicación minimalista y divertida en Python, diseñada para ayudarte a convertir importes en euros a kilómetros dentro de un sistema de kilometraje específico. Ideal para cuando necesitas declarar un kilometraje diferente al que aparece en el sistema por errores de cálculo.
+🌍 GaiaKm
 
-## 🚀 Funcionalidades
+GaiaKm es un programa diseñado para calcular la conversión de kilómetros en La Menorquina. El sistema oficial de la empresa solo detecta una tarifa de 0,19 €/km, mientras que la tarifa real debería ser de 0,26 €/km. Este programa te permite ingresar el número de kilómetros para obtener el valor correcto.
 
-- 🧮 **Conversión precisa**: Ingresa un importe en euros y convierte a kilómetros usando una tasa predefinida.
-- 🖥️ **Interfaz gráfica intuitiva**: Interfaz fácil de usar desarrollada con Tkinter.
-- 🍦 **Helado ASCII**: Disfruta de un toque divertido con un arte ASCII de helado.
+🚀 Instalación
 
-## 📦 Instalación
+⚙️ Requisitos
 
-### Requisitos previos
+	•	Python 3.x: Verifica si tienes Python instalado ejecutando el siguiente comando en tu terminal:
 
-Antes de empezar, asegúrate de tener:
+python3 --version
 
-- **Python 3.x** instalado. Puedes descargarlo desde [aquí](https://www.python.org/downloads/).
-- La biblioteca **Tkinter**. Si no la tienes, instálala con el siguiente comando:
-  - Para **Debian/Ubuntu**:
-    ```bash
-    sudo apt-get install python3-tk
-    ```
-  - En **macOS**, Tkinter debería venir preinstalado.
+Si no lo tienes, instálalo con:
 
-### Pasos
+sudo apt-get update
+sudo apt-get install python3
 
-1. Clona este repositorio usando SSH:
 
-   ```bash
-   git clone git@github.com:wavecheff/Gaia-KM.git
-   cd GaiaKm
+	•	Git: Para clonar el repositorio. Puedes instalarlo con:
 
-	2.	Ejecuta la aplicación con Python:
-
-python3 gaia_km.py
+sudo apt-get install git
 
 
 
-¡Y listo! Verás la interfaz gráfica lista para convertir.
+🛠️ Pasos de instalación
 
-🛠️ Uso
+	1.	Clona el repositorio:
 
-	1.	Abre la aplicación.
-	2.	Ingresa el importe en euros en el campo de texto.
-	3.	Haz clic en el botón Convertir a km.
-	4.	El programa calculará cuántos kilómetros deberías declarar según la tasa incorrecta de 0.19 €/km y te mostrará el resultado.
+git clone https://github.com/wavecheff/gaiaKm.git
 
-Ejemplo:
 
-Si ingresas 26 euros, la aplicación te mostrará que necesitas declarar 136.84 km.
+	2.	Accede a la carpeta del proyecto:
 
-🎨 Vista previa
+cd gaiaKm
 
-¡Aquí tienes una muestra del arte ASCII que verás en la aplicación!
 
-       .
-     --.-"°'-.
-    -/       \-
-   (    .-.    )
-   (  .-._.-.  )
-   (    '-'    )
-    \  ===  /
-     \  ==  /
-      \  =  /
-       \   /
-        \ /
-         V
+	3.	Crea un entorno virtual (opcional pero recomendado):
 
-🤝 Contribuciones
+python3 -m venv venv
+source venv/bin/activate  # En Linux/Mac
 
-¡Las contribuciones son bienvenidas! Si tienes ideas o mejoras para GaiaKm, sigue estos pasos:
+Para usuarios de Windows:
 
-	1.	Haz un fork del proyecto.
-	2.	Crea una nueva rama (git checkout -b feature-nueva-funcionalidad).
-	3.	Haz commit de tus cambios (git commit -m 'Agrega nueva funcionalidad').
-	4.	Haz push a la rama (git push origin feature-nueva-funcionalidad).
-	5.	Abre un pull request.
+venv\Scripts\activate
+
+
+	4.	Instala las dependencias:
+
+pip install -r requirements.txt
+
+
+
+▶️ Ejecución del programa
+
+Para iniciar GaiaKm, usa el siguiente comando:
+
+python gaia_km.py
+
+Una vez ejecutado, verás una interfaz gráfica donde puedes ingresar los kilómetros que deseas convertir.
+
+🧩 Funcionalidades
+
+	•	Conversión automática: Calcula cuántos kilómetros deberías declarar a 0,19 €/km para recibir el importe correcto a 0,26 €/km.
+	•	Interfaz gráfica amigable.
+	•	Fácil de usar: Pensado para cualquier usuario sin necesidad de conocimientos técnicos avanzados.
+
+📦 Dependencias
+
+Las dependencias del proyecto están gestionadas a través de requirements.txt. Asegúrate de instalarlas con:
+
+pip install -r requirements.txt
 
 📄 Licencia
 
-Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo LICENSE.
 
+🖼️ Capturas de pantalla
 
+Pantalla principal:
 
-
+Si necesitas más íconos o una estructura diferente, puedo ajustarlo. También, si tienes imágenes o iconos específicos para añadir, solo dímelo y los incluyo.
